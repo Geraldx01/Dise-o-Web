@@ -1,0 +1,511 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    overflow-x: hidden;
+}
+
+img{
+    max-width: 100%;
+    display: block;
+}
+
+iframe{
+    width: 100%;
+}
+
+.banner{
+    background-image: url("https://images.unsplash.com/photo-1493238792000-8113da705763");
+    background-size: cover;
+    background-position: center;
+
+    min-height: 100vh;
+
+    position: relative;
+
+    clip-path: polygon(0 0,100% 0,100% 90%,0 100%);
+
+    padding: 80px 20px;
+}
+
+.overlay{
+    background: rgba(0,0,0,0.6);
+
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner h1{
+    font-size: clamp(38px,8vw,65px);
+    font-weight: bold;
+}
+
+.banner p{
+    font-size: clamp(16px,3vw,22px);
+    margin: 20px 0;
+}
+
+.boton{
+    transition: 0.3s;
+    padding: 12px 25px;
+    white-space: nowrap;
+}
+
+.boton:hover{
+    transform: scale(1.05);
+}
+
+.info{
+    background: white;
+    padding: 80px 0;
+}
+
+.imagen-info{
+    border-radius: 20px;
+
+    clip-path: polygon(0 0,100% 0,100% 85%,0 100%);
+}
+
+.servicios{
+    background: #111;
+    color: white;
+
+    padding: 100px 0;
+
+    clip-path: polygon(0 10%,100% 0,100% 100%,0 100%);
+}
+
+.titulo-seccion{
+    color: white;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.card-servicio{
+    background: #1c1c1c;
+
+    padding: 40px 25px;
+
+    border-radius: 25px;
+
+    height: 100%;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+
+    transition: 0.3s;
+}
+
+.card-servicio:hover{
+    transform: translateY(-10px);
+
+    background: #ffb300;
+}
+
+.card-servicio h3{
+    color: white;
+
+    margin-bottom: 15px;
+}
+
+.card-servicio p{
+    color: #d6d6d6;
+    font-size: 16px;
+}
+
+.card-servicio:hover h3,
+.card-servicio:hover p{
+    color: black;
+}
+
+.icono{
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.autos{
+    background: white;
+    padding: 80px 0;
+}
+
+.card{
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.card img{
+    width: 100%;
+    height: 250px;
+
+    object-fit: cover;
+}
+
+.videos{
+    background: #f0f0f0;
+
+    padding: 100px 0;
+
+    clip-path: polygon(0 0,100% 5%,100% 100%,0 100%);
+}
+
+.audio-section{
+    background: #111;
+    color: white;
+
+    padding: 80px 0;
+}
+
+.contacto{
+    background: #f5f5f5;
+
+    padding: 100px 0;
+
+    clip-path: polygon(0 0,100% 8%,100% 100%,0 100%);
+}
+
+.suscripcion-box{
+    background: white;
+
+    padding: 50px 40px;
+
+    border-radius: 30px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.suscripcion-box h2{
+    font-size: 42px;
+    font-weight: bold;
+
+    margin-bottom: 20px;
+}
+
+.suscripcion-box p{
+    color: #666;
+
+    margin-bottom: 35px;
+
+    font-size: 17px;
+}
+
+.suscripcion-form{
+    display: flex;
+    gap: 15px;
+
+    flex-wrap: wrap;
+}
+
+.suscripcion-form input{
+    flex: 1;
+
+    height: 55px;
+
+    border-radius: 12px;
+
+    padding-left: 20px;
+}
+
+.suscripcion-form button{
+    padding: 0 30px;
+
+    border-radius: 12px;
+
+    font-weight: bold;
+}
+
+.form-control,
+.form-select{
+    padding: 12px;
+    border-radius: 10px;
+}
+
+.mapa{
+    background: #111;
+    color: white;
+
+    padding-top: 80px;
+
+    clip-path: polygon(0 8%,100% 0,100% 100%,0 100%);
+}
+
+.titulo-mapa{
+    font-size: 50px;
+    font-weight: bold;
+
+    margin-bottom: 15px;
+}
+
+.texto-mapa{
+    color: #d6d6d6;
+
+    margin-bottom: 40px;
+}
+
+.mapa-contenedor{
+    overflow: hidden;
+
+    border-radius: 30px 30px 0 0;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+.mapa iframe{
+    width: 100%;
+    border: 0;
+}
+
+.footer{
+    background: #000;
+    color: white;
+
+    padding: 60px 0 20px 0;
+}
+
+.footer h3{
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.footer p{
+    color: #cfcfcf;
+}
+
+.redes{
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+}
+
+.redes a{
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+
+    text-decoration: none;
+
+    font-size: 24px;
+
+    color: white;
+
+    transition: 0.3s;
+}
+
+.facebook{
+    background: #1877f2;
+}
+
+.instagram{
+    background: #e1306c;
+}
+
+.whatsapp-red{
+    background: #25d366;
+}
+
+.redes a:hover{
+    transform: translateY(-8px) scale(1.1);
+
+    box-shadow: 0 10px 20px rgba(255,255,255,0.2);
+}
+
+.facebook:hover{
+    background: white;
+    color: #1877f2;
+}
+
+.instagram:hover{
+    background: white;
+    color: #e1306c;
+}
+
+.whatsapp-red:hover{
+    background: white;
+    color: #25d366;
+}
+
+.copy{
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.whatsapp{
+    position: fixed;
+
+    bottom: 20px;
+    right: 20px;
+
+    background: green;
+    color: white;
+
+    padding: 12px 20px;
+
+    border-radius: 50px;
+
+    text-decoration: none;
+    font-weight: bold;
+
+    z-index: 1000;
+}
+
+.scrolltop{
+    position: fixed;
+
+    right: 15px;
+    bottom: 90px;
+
+    width: 55px;
+    height: 55px;
+
+    background: #ffb300;
+    color: black;
+
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-decoration: none;
+
+    font-size: 32px;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: 0.3s;
+
+    z-index: 999;
+}
+
+.scrolltop.activo{
+    opacity: 1;
+    visibility: visible;
+}
+
+.scrolltop:hover{
+    transform: translateY(-8px) scale(1.1);
+
+    background: white;
+    color: #ffb300;
+}
+
+@media(max-width:768px){
+
+    .banner{
+        clip-path: none;
+
+        text-align: center;
+
+        min-height: 85vh;
+    }
+
+    .banner h1{
+        font-size: 38px;
+    }
+
+    .banner p{
+        font-size: 17px;
+    }
+
+    .imagen-info{
+        margin-top: 20px;
+
+        clip-path: none;
+    }
+
+    .titulo-seccion,
+    .titulo-mapa{
+        font-size: 32px;
+    }
+
+    .servicios,
+    .videos,
+    .mapa,
+    .contacto{
+        clip-path: none;
+    }
+
+    .card-servicio{
+        padding: 30px 20px;
+    }
+
+    .suscripcion-box{
+        padding: 35px 20px;
+    }
+
+    .suscripcion-box h2{
+        font-size: 28px;
+    }
+
+    .suscripcion-form{
+        flex-direction: column;
+    }
+
+    .suscripcion-form input,
+    .suscripcion-form button{
+        width: 100%;
+    }
+
+    .scrolltop{
+        width: 45px;
+        height: 45px;
+
+        font-size: 24px;
+
+        right: 12px;
+        bottom: 85px;
+    }
+
+    .whatsapp{
+        right: 12px;
+        bottom: 20px;
+
+        padding: 10px 16px;
+
+        font-size: 14px;
+    }
+
+    .footer{
+        text-align: center;
+    }
+
+    .redes{
+        margin-top: 20px;
+    }
+
+    .mapa{
+        padding-top: 50px;
+    }
+
+    .mapa-contenedor{
+        border-radius: 20px 20px 0 0;
+    }
+
+}
